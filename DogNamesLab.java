@@ -1,5 +1,4 @@
 package cmsc256;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Collections;
@@ -63,10 +62,13 @@ public class DogNamesLab {
 		
 		switch(option) {
 		case 1:
-			getCountForDog(doglist);
+			System.out.println("Enter a dog’s name?");
+			String name = in.nextLine();
+			int nameCount = getCountForDog(doglist, name);
+			System.out.println(name + " is registered " + nameCount + " times.");
 			break;
 		case 2:
-			showDogNamesAlphabetically(doglist);
+			System.out.println(getDogNamesAlphabetically(doglist));
 			break;
 		case 3:
 			playGuessingGame(doglist, in);
@@ -76,14 +78,16 @@ public class DogNamesLab {
 		in.close();
 	}
 
-	public static void getCountForDog(ArrayList<Dog> dogs) {	
-		// TODO: prompt the user for a dog's name
+	public static int getCountForDog(ArrayList<Dog> dogs, String name) {
+		// TODO: 
 		// search the list for the Dog named name 
 		// display dogs name and the number of registrations for that name
+		return 0;	
 	}
 	
-	public static void showDogNamesAlphabetically(ArrayList<Dog> dogs) {
-		// TODO Sort the list of Dog by name and display
+	public static String getDogNamesAlphabetically(ArrayList<Dog> dogs) {
+		// TODO Sort the list of Dog by name return
+		return null;
 	}
 
 	public static void playGuessingGame(ArrayList<Dog> dogs, Scanner readIn) {
