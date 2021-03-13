@@ -58,7 +58,6 @@ public class DogNamesLab {
 		
 		System.out.println(prompt);
 		int option = readInput.nextInt();
-		readInput.close();
 		
 		switch(option) {
 		case 1:
